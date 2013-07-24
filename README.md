@@ -1,4 +1,2 @@
-interactive
+Interactive Python
 ===========
-
-interactivepython
