@@ -52,7 +52,7 @@ class UnorderedList:
         current = self.head
         previous = None
         found = False
-        while current.getNext() != None and not found:
+        while current != None and not found:
             if current.getData() == item:
                 found = True
             else:
@@ -61,4 +61,12 @@ class UnorderedList:
 
         if found:
             previous.setNext(current.getNext())
+
+    def toList(self):
+        l = []
+        current = self.head
+        while current != None:
+            l.append(current.getData())
+            current = current.getNext()
+        return l
 

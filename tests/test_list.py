@@ -23,11 +23,13 @@ class UnorderedListTestCase(unittest.TestCase):
         self.assertEqual(self.mylist.search(3),False)
 
     def test_remove(self):
-        self.mylist.remove(71)
+        self.mylist.remove(12)
         self.mylist.remove(11)
-        self.assertEqual(self.mylist.search(71),False)
+        self.assertEqual(self.mylist.search(12),False)
         self.assertEqual(self.mylist.search(11),False)
         self.assertEqual(self.mylist.length(),5)
+    def test_toList(self):
+        self.assertEqual(self.mylist.toList(),[16,71,89,9,22,12])
 
 if __name__ == '__main__':
     unittest.main()
