@@ -1,6 +1,6 @@
 
 import sys
-sys.path.append("lib");
+sys.path.append("lib")
 
 import unittest
 from deque import Deque 
