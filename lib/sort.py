@@ -41,9 +41,21 @@ def insertionSort(alist):
     
 def shellSort(alist):
     """希尔排序"""
-    pass
+    sublistcount = len(alist) // 2
+    while sublistcount > 0:
+        for startposition in range(sublistcount):
+            _gapInsertionSort(alist,startposition,sublistcount)
+        sublistcount = sublistcount // 2
 
+    return alist
 
+def _gapInsertionSort(alist,start,gap):
+    for index in range(start,len(alist),gap):
+        currentValue =  alist[index]
+        position = index
 
-
+        while position >= gap and alist[position-gap] > currentValue:
+            alist[position] = alist[position-gap]
+            position = position - gap 
         
+        alist[position] = currentValue
